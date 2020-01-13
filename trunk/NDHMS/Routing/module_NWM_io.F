@@ -4228,7 +4228,7 @@ subroutine output_chanObs_NWM(domainId)
    type(chObsMeta) :: fileMeta
 
    ! Local variables
-   integer :: single_output_file, single_output_file_exists
+   logical :: single_output_file, single_output_file_exists
    integer :: nudgeFlag, mppFlag, diagFlag
    integer :: minSinceSim ! Number of minutes since beginning of simulation.
    integer :: minSinceEpoch1 ! Number of minutes from EPOCH to the beginning of the model simulation.
