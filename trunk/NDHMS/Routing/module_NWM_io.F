@@ -4559,7 +4559,7 @@ subroutine output_chanObs_NWM(domainId)
 
       if((.not. single_output_file) .or. (.not. single_output_file_exists)) then
 
-         iret = nf90_create(trim(output_flnm), cmode=nf90_write, ncid=ftn)
+         iret = nf90_create(trim(output_flnm), cmode=nf90_netcdf4, ncid=ftn)
          call nwmCheck(diagFlag,iret,'ERROR: Unable to create CHANOBS NetCDF file.')
 
          ! Write global attributes.
